@@ -1,0 +1,106 @@
+body{
+    background-color: white;
+    margin: 20px;
+}
+
+
+  
+  #header{
+    grid-area: header;
+    background-image: url(../img/dandelion.jpg);
+    
+    
+}
+#nav{
+    grid-area: nav;
+    background-image: url(../img/dand2.jpg);
+   
+    
+}
+#content{
+    grid-area: content;
+    background-image: url(../img/dandy.gif);
+    
+}
+#aside{
+    grid-area: aside;
+    background-image: url(../img/dand3.jpg);
+   
+}
+#sidebar{
+    grid-area: sidebar;
+    background-image: url(../img/dandy2.gif);
+    
+}
+
+
+#wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    padding: 10px;
+    grid-template-areas:
+    "header nav nav" 
+    "aside content sidebar"
+    ;
+    
+}
+#wrapper>div{
+    background-color: bisque;
+    border-radius: 10px;
+    padding: 10px;
+    height: 40vh;
+    opacity: 0.5;
+    background-size: cover;
+    margin: 5px;
+    text-align: right
+    
+;
+}
+#wrapper>div:hover{
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+  /* Menü stílusa */
+  ul {
+    list-style-type:disc;
+    margin: 0;
+    padding: 0;
+    overflow:auto;
+    background-color: #333;
+    opacity: 0.5;
+    border-radius: 10px;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    background-color: grey;
+  }
+
+@media all and (max-width: 700px){
+    #wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "header "
+        "nav" 
+        "aside"
+        "content"
+        "sidebar"
+        ;
+        
+    }
+}
+ 
